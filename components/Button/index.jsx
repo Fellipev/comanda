@@ -1,11 +1,12 @@
 import { Text, TouchableOpacity } from "react-native";
-import { styles } from "./style"
-import { View } from "react-native-web";
+import { styles } from "./style";
 
-export default function Button(props) {
+export default function Button({children, ...props}) {
     return (
-        <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>{props.children}</Text>
+        <TouchableOpacity style={styles.button} {...props}> 
+            <Text style={styles.buttonText}>
+                {children}
+            </Text>
         </TouchableOpacity>
     )
 }

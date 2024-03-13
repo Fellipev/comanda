@@ -1,14 +1,14 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { StyleSheet, Text, View } from "react-native";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
 
-export default function Comanda() {
+export default function Comanda({ navigation }) {
     return (
         <View style={styles.container}>
             <Text>Olá,</Text>
             <Text>Fellipe Reis</Text>
             <Input placeholder="comanda"/>
-            <Button>confirmar</Button>
+            <Button onPress={() => navigation.navigate('Produtos')}>confirmar</Button>
         </View>
     )
 }

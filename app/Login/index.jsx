@@ -1,10 +1,12 @@
 import { Image, Text, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import Button from "../../components/Button";
+import Input from "../../components/Input";
 import { styles } from "./style";
+
 // import { Ionicons } from '@expo/vector-icons';
 
-export default function Login(){
+export default function Login({ navigation }){
     return(
         <View style={styles.container}>
             <Image 
@@ -19,7 +21,7 @@ export default function Login(){
             <Input placeholder='senha' secureTextEntry/>
             
             {/* My button's component! */}
-            <Button>entrar</Button>
+            <Button onPress={() => navigation.navigate('Comanda')}>entrar</Button>
             <StatusBar style="auto" />
         </View>
     )
