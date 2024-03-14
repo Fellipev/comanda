@@ -8,17 +8,22 @@ import Login from './app/Login';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { AuthProvider } from './context/AuthContext';
+
+
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Comanda" component={Comanda} />
-        <Stack.Screen name="Produtos" component={Produtos} />
-      </Stack.Navigator>
+      <AuthProvider>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Comanda" component={Comanda} />
+          <Stack.Screen name="Produtos" component={Produtos} />
+        </Stack.Navigator>
+      </AuthProvider>
     </NavigationContainer>
   );
 }
