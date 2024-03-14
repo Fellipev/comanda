@@ -1,0 +1,23 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Bolo de chocolate",
+            "imagePath": "https://imgs.search.brave.com/ck5bRMhnCtlPWoAiJcP6IXC5L8sPQqejmStgLVl_k7o/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wdWJp/bWcuYmFuZC51b2wu/Y29tLmJyL2ZpbGVz/L2JlZDdhODU5YTA3/NmZiM2ZiOTYwLmpw/Zw",
+            "preco": 8
+        },
+        {
+            "id": 2,
+            "nome": "Bolo de cenoura",
+            "imagePath": "https://imgs.search.brave.com/ck5bRMhnCtlPWoAiJcP6IXC5L8sPQqejmStgLVl_k7o/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wdWJp/bWcuYmFuZC51b2wu/Y29tLmJyL2ZpbGVz/L2JlZDdhODU5YTA3/NmZiM2ZiOTYwLmpw/Zw",
+            "preco": 9
+        },
+        {
+            "id": 3,
+            "nome": "Bolo de laranja",
+            "imagePath": "https://imgs.search.brave.com/ck5bRMhnCtlPWoAiJcP6IXC5L8sPQqejmStgLVl_k7o/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wdWJp/bWcuYmFuZC51b2wu/Y29tLmJyL2ZpbGVz/L2JlZDdhODU5YTA3/NmZiM2ZiOTYwLmpw/Zw",
+            "preco": 12
+        }
+
+    ]
+}

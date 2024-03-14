@@ -1,22 +1,32 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, Touchable } from "react-native";
 import { styles } from './style';
-import { Ionicons } from '@expo/vector-icons';
+import { TouchableOpacity } from "react-native-web";
 
-export default function CardProtudo(props) {
+export default function CardProduto({ produto }) {
+    
     return (
-        <View style={styles.container}>
-            <View style={styles.cardProdutoInicio}>
-                <Image
-                    style={styles.img}
-                    source={{
-                        uri: 'https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saudável-que-nada-brasileiro-gosta-de-fast-food.jpg?fit=1600%2C1067&ssl=1',
-                    }} />
-                <Text style={styles.valor}>R$ {props.valor}</Text>
+        <View style={styles.pedidos}>
+
+            <View style={styles.CardProduto}>
+                <Image style={styles.img} source={{ uri: produto.imagePath}}/>
+
+                <View style={styles.produtoData}>
+                    <Text>{produto.nome}</Text>
+                    <Text style={styles.price}>R$ {produto.preco.toFixed(2)}</Text>
+                </View>
+
+                <View style={styles.spinner}>
+                    <TouchableOpacity>
+                        <Text style={styles.spinnerMinus}>-</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.spinnerValue}>0</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.sprinnerPlus}>+</Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
-            <View style={styles.cardProdutoFim}>
-                <Ionicons style={styles.icons} name="add-circle-outline"></Ionicons>
-                <Ionicons style={styles.icons} name="remove-circle-outline"></Ionicons>
-            </View>
+
         </View>
     )
 }
